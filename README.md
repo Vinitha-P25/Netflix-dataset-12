@@ -1,94 +1,187 @@
-# Netflix Dataset Analysis
+# Netflix Data Analysis
 
 ## Project Overview
 
-This project focuses on **data preprocessing, exploratory data analysis (EDA), and visualization** of a Netflix dataset using Python.
+This project analyzes the Netflix Titles dataset using Python.
 
-The main goal is to clean the dataset, handle missing values, understand the data, and create visualizations to identify useful patterns and insights from Netflix movies and TV shows.
+The project covers a complete data analysis workflow, including data preprocessing, descriptive statistics, data visualization, probability concepts, and probability distributions.
 
-## Technologies Used
+The main objective is to understand patterns and characteristics of Netflix movies and TV shows through practical data analysis techniques.
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Jupyter Notebook
+---
+
+## Objectives
+
+- Clean and preprocess the Netflix dataset
+- Handle missing values and duplicate records
+- Perform descriptive statistical analysis
+- Create meaningful data visualizations
+- Understand basic probability concepts
+- Implement conditional probability
+- Apply Bayes' theorem
+- Understand normal, binomial, and Poisson distributions
+
+---
 
 ## Dataset
 
-The dataset contains information about Netflix titles, including:
+The Netflix Titles dataset contains information about movies and TV shows available on Netflix.
 
-* Title
-* Type (Movie/TV Show)
-* Director
-* Cast
-* Country
-* Date Added
-* Release Year
-* Rating
-* Duration
-* Genres
-* Description
+### Important Columns
+
+- `show_id`
+- `type`
+- `title`
+- `director`
+- `cast`
+- `country`
+- `date_added`
+- `release_year`
+- `rating`
+- `duration`
+- `listed_in`
+- `description`
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+- Jupyter Notebook
+- Git
+- GitHub
+
+---
 
 ## Data Preprocessing
 
-The following preprocessing steps were performed:
+The following preprocessing steps were implemented:
 
-1. Loaded the Netflix dataset using Pandas.
-2. Checked the dataset structure and data types.
-3. Identified missing values.
-4. Handled missing values where required.
-5. Removed duplicate records.
-6. Converted columns into suitable data types.
-7. Cleaned and standardized the data.
-8. Processed the genres column for analysis.
-9. Created a cleaned dataset for further analysis.
+- Inspected dataset structure and dimensions
+- Checked missing values
+- Removed duplicate rows
+- Filled missing director values
+- Filled missing cast values
+- Filled missing country values
+- Filled missing rating values using the mode
+- Forward-filled missing `date_added` values
+- Converted `date_added` to datetime format
+- Created `year_added` from `date_added`
+- Converted movie duration from text into numerical minutes
 
-## Exploratory Data Analysis
+---
 
-The cleaned dataset was analyzed to understand:
+## Descriptive Statistics
 
-* Number of Movies and TV Shows
-* Distribution of content ratings
-* Content released over different years
-* Popular genres
-* Countries producing Netflix content
-* Movie and TV Show distribution
-* Other useful patterns in the dataset
+Descriptive statistics were applied to numerical variables such as `release_year` and movie duration.
+
+The following concepts were implemented:
+
+- Mean
+- Median
+- Mode
+- Variance
+- Standard Deviation
+- Percentiles
+
+The 25th, 50th, and 75th percentiles were calculated to understand the distribution of the data.
+
+---
 
 ## Data Visualization
 
-Matplotlib was used to create visualizations for better understanding of the dataset.
+Matplotlib and Seaborn were used to visualize the Netflix dataset.
 
-The visualizations help identify trends and compare different categories of Netflix content.
+### Visualizations Included
+
+- Movies vs TV Shows
+- Top 10 Countries
+- Content Added Per Year
+- Ratings Distribution
+- Release Year Histogram
+- Movie Duration Histogram
+- Release Year Box Plot
+- Movie Duration Box Plot
+- Release Year vs Movie Duration Scatter Plot
+- Top 10 Directors
+- Top 10 Genres
+
+### Histogram
+
+Histograms were used to understand the distribution of numerical variables such as release year and movie duration.
+
+### Box Plot
+
+Box plots were used to understand the median, quartiles, spread, and possible outliers.
+
+### Scatter Plot
+
+Scatter plots were used to examine the relationship between release year and movie duration.
+
+---
+
+## Probability Analysis
+
+Basic probability concepts were implemented using the Netflix dataset.
+
+### Events
+
+The probability of randomly selecting:
+
+- A Movie
+- A TV Show
+
+was calculated.
+
+### Conditional Probability
+
+Conditional probability was demonstrated using Netflix ratings.
+
+Example:
+
+`P(Movie | TV-MA)`
+
+This represents the probability that a title is a Movie given that its rating is TV-MA.
+
+### Bayes' Theorem
+
+Bayes' theorem was used to calculate the probability of a title being a Movie given its rating information.
+
+---
+
+## Probability Distributions
+
+Three probability distributions were explored.
+
+### Normal Distribution
+
+Movie duration was used as a numerical example to understand the concept of a normal distribution and probability density.
+
+### Binomial Distribution
+
+A random selection of 10 Netflix titles was used as an example.
+
+The number of Movies selected represents the number of successes in a fixed number of trials.
+
+### Poisson Distribution
+
+The number of Netflix titles added per year was used as an example of counting events within a fixed interval.
+
+---
 
 ## Project Structure
 
 ```text
 Netflix-dataset-12/
 │
-├── Netflix_Analysis.ipynb
-├── netflix_cleaned.csv
-└── README.md
-```
-
-## Key Learnings
-
-Through this project, I practiced:
-
-* Data cleaning and preprocessing
-* Handling missing values
-* Removing duplicates
-* Pandas DataFrame operations
-* GroupBy and aggregation
-* Data filtering
-* Exploratory Data Analysis
-* Data visualization
-* Working with real-world datasets
-* Using Git and GitHub for project management
-
-## Conclusion
-
-This project helped me understand the complete basic workflow of a data analysis project, starting from raw data preprocessing and moving towards exploratory analysis and visualization.
-
-It also provided practical experience in using Python libraries such as Pandas, NumPy, and Matplotlib for working with real-world datasets.
+├── README.md
+│
+└── netflix/
+    ├── Netflix_Analysis.ipynb
+    ├── netflix_cleaned.csv
+    └── netflix_titles(1).csv
