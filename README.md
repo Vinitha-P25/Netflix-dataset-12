@@ -12,6 +12,7 @@ The main objective is to understand patterns and characteristics of Netflix movi
 
 ## Objectives
 
+<<<<<<< HEAD
 * Clean and preprocess the Netflix dataset
 * Handle missing values and duplicate records
 * Perform descriptive statistical analysis
@@ -23,6 +24,24 @@ The main objective is to understand patterns and characteristics of Netflix movi
 * Apply sampling and the Central Limit Theorem
 * Perform hypothesis testing
 * Analyze covariance and correlation
+=======
+- Clean and preprocess the Netflix dataset
+- Handle missing values and duplicate records
+- Perform descriptive statistical analysis
+- Create meaningful data visualizations
+- Understand basic probability concepts
+- Implement conditional probability
+- Apply Bayes' theorem
+- Understand normal, binomial, and Poisson distributions
+- Apply sampling techniques
+- Demonstrate the Central Limit Theorem
+- Perform hypothesis testing using p-values
+- Implement a one-sample t-test
+- Implement a chi-square test
+- Calculate covariance
+- Calculate the correlation coefficient
+- Understand correlation vs causation
+>>>>>>> a643905 (Updated README with inferential statistics)
 
 ---
 
@@ -176,6 +195,46 @@ The number of Movies selected represents the number of successes in a fixed numb
 The number of Netflix titles added per year was used as an example of counting events within a fixed interval.
 
 ---
+## Inferential Statistics
+
+Inferential statistics were implemented using the Netflix dataset to make statistical conclusions from samples and analyze relationships between variables.
+
+### Sampling
+
+A random sample of Netflix release years was selected and compared with the full population.
+
+### Central Limit Theorem
+
+Repeated random samples were taken from the release-year data and the distribution of sample means was visualized to demonstrate the Central Limit Theorem.
+
+### Hypothesis Testing
+
+Hypothesis testing was used to make statistical decisions using:
+
+- Null hypothesis (H₀)
+- Alternative hypothesis (H₁)
+- Significance level
+- P-value
+
+### One-Sample T-Test
+
+A one-sample t-test was used to test whether the average movie duration is significantly different from 90 minutes.
+
+### Chi-Square Test
+
+A chi-square test was used to investigate whether Netflix content type and rating are statistically associated.
+
+### Covariance
+
+Covariance was calculated between `release_year` and movie duration to understand how the two numerical variables vary together.
+
+### Correlation
+
+The Pearson correlation coefficient was calculated between `release_year` and movie duration to measure the strength and direction of their linear relationship.
+
+### Correlation vs Causation
+
+The project demonstrates that correlation between two variables does not necessarily mean that one variable causes the other.
 
 ## Inferential Statistics
 
